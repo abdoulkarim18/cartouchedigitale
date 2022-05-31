@@ -8,9 +8,8 @@
                     <div class="top-address">
                         <p>
                             <span><i class="fas fa-home"></i>Votre agence de référence</span>
-                            <a href="#"><i class="fas fa-phone-alt"></i> +225 0153533896
-                            </a>
-                            <a href="#"><i class="fas fa-envelope"></i>info@alycartouche.ci</a>
+                            <span><i class="fas fa-phone-alt"></i> +225 0153533896</span>
+                            <span><i class="fas fa-envelope"></i> info@alycartouche.ci</span>
                         </p>
                     </div>
                 </div>
@@ -18,10 +17,10 @@
                 <div class="col-lg-4 col-md-3 col-sm-12 ">
                     <div class="top-right-menu">
                         <ul class="social-icons text-right text_m_center">
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="//www.facebook.com/Cartouchedigitale" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC7cL9rGYxUz7rKCzYFdyqpQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="https://www.instagram.com/alycartouchedigitale" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/aly-cartouche-digitale/?viewAsMember=true" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -41,8 +40,8 @@
                                         <!-- LOGO -->
                                         <div class="col-md-3 col-sm-3 col-xs-4">
                                             <div class="logo">
-                                                <a href="index.html" title="AlyCartoucheDigital">
-                                                    <img src="{{ asset('assets/images/logo_aly.jpg') }}" alt="logo_aly">
+                                                <a href="{{route('index')}}" title="Aly Cartouche Digitale">
+                                                    <img src="{{ asset('assets/images/logo1.png') }}" alt="logo">
                                                 </a>
                                             </div>
                                         </div>
@@ -67,77 +66,31 @@
                                                         <a href="#">Services</a>
                                                         <ul class="sub-menu">
                                                             @forelse ($cat_services as $cat_service )
-
-
                                                             <li>
                                                                 <a href="#">{{$cat_service->libelle}}</a>
                                                                 @forelse ($cat_service->services as $catservice )
-
-                                                                <ul class="sub-menu">
-                                                                    <li><a href="{{ route('developpement-web-et-mobile') }}">{{$catservice->title}}
-                                                                    </a></li>
-                                                                    {{-- <li><a href="{{ route('chatbot') }}">Réalisation de
-                                                                            chatbot</a></li>
-                                                                    <li><a href="{{ route('referencement') }}">Réferencement
-                                                                            naturel et payant</a></li> --}}
-                                                                </ul>
+                                                                    <ul class="sub-menu">
+                                                                        @foreach($cat_service->services as $catservice)
+                                                                            <li>
+                                                                                <a href="{{ route('services', $catservice->slug) }}">{{$catservice->title}}
+                                                                                </a>
+                                                                            </li>
+                                                                        @endforeach
+                                                                    </ul>
                                                                 @empty
 
                                                                 @endforelse
                                                             </li>
                                                             @empty
-                                                                pas de services
+                                                               <li class="text-white">Aucun Service Disponible</li>
                                                             @endforelse
-                                                            {{-- <li>
-                                                                <a href="#">Conception de site web</a>
-                                                                <ul class="sub-menu">
-                                                                    <li><a href="{{ route('developpement-web-et-mobile') }}">Développement
-                                                                            d'applications Web & mobiles</a></li>
-                                                                    <li><a href="{{ route('chatbot') }}">Réalisation de
-                                                                            chatbot</a></li>
-                                                                    <li><a href="{{ route('referencement') }}">Réferencement
-                                                                            naturel et payant</a></li>
-                                                                </ul>
-                                                            </li> --}}
-                                                            <li>
-                                                                <a href="#">Evénementiel</a>
-                                                                <ul class="sub-menu">
-                                                                    <li><a href="{{ route('realisation') }}">Réalisation de film
-                                                                            Institutionel</a></li>
-                                                                    <li><a href="{{ route('couverture-media') }}">Couverture
-                                                                            médias d'événnements</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">Gestion des
-                                                                    réseaux sociaux</a>
-                                                                <ul class="sub-menu">
-                                                                    <li><a href="{{ route('publicite') }}">Publicité en
-                                                                            ligne</a>
-                                                                    </li>
-                                                                    <li><a href="{{ route('recuperation-compte') }}">Récuperation
-                                                                            de compte</a></li>
-
-                                                                </ul>
-                                                            </li>
-                                                            <li><a href="{{ route('elaboration-strategie') }}">Elaboration de
-                                                                    stratégie digitale
-                                                                </a></li>
-                                                            <li><a href="{{ route('identite-marque') }}">Création
-                                                                    d'identité de marque</a></li>
-                                                            <li><a href="{{ route('lancement-produit') }}">Campagne de
-                                                                    lancement de produit</a></li>
-
                                                         </ul>
                                                     </li>
-
-
                                                     <li><a href="{{ route('contactez-nous') }}">Contact</a></li>
                                                 </ul>
                                                 <div class="donate-btn-header">
                                                     <a class="dtbtn" href="#"><i
-                                                            class="fas fa-phone-alt"></i>(+225)
-                                                        0153533896</a>
+                                                            class="fas fa-phone-alt"></i>(+225) 0153533896</a>
                                                 </div>
                                             </nav>
                                         </div>

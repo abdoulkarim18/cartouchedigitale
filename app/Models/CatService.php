@@ -9,6 +9,7 @@ class CatService extends Model
 {
     use HasFactory;
     protected $fillable = ['libelle','slug'];
+    
     public function services(){
         return $this->hasMany(Service::class);
     }

@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="mobile_menu_logo text-center">
-                    <a href="index.html" title="AlyCartoucheDigital">
-                        <img src="{{ asset('assets/images/logo_aly.jpg') }}" alt="AlyCartoucheDigital">
+                    <a href="{{route('index')}}" title="logo">
+                        <img src="{{ asset('assets/images/logo1.png') }}" alt="logo">
                     </a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                         </li>
                         <li><a href="{{ route('elaboration-strategie') }}">Elaboration de stratégie digitale
                             </a></li>
-                        <li><a href="{{ route('identite-marque') }}">Création d'identité de marque</a></li>
+                        <li><a href="{{ route('identite-visuelle') }}">Création d'identité Visuelle</a></li>
                         <li><a href="{{ route('lancement-produit') }}">Campagne de lancement de produit</a></li>
 
                     </ul>

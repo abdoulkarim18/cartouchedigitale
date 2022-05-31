@@ -89,7 +89,7 @@
                                 <div class="witr_field2">
                                     <div class="witr_text_area2">
                                         <textarea name="comment" class="@error('comment')is-invalid
-                                        @enderror" placeholder="Votre Preocupation...">{{old('comment')}}</textarea>
+                                        @enderror" placeholder="De quoi avez vous besoin ?">{{old('comment')}}</textarea>
                                         @error('comment')
                                        <div class="invalid-feedback d-block">
                                            {{$errors->first('comment')}}

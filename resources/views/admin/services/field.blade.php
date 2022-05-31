@@ -8,7 +8,7 @@
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
-                        <li class="breadcrumb-item"><a href="javascript: void(0);">Formulaire</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Retour</a></li>
                         <li class="breadcrumb-item active">Formulaire d'envois</li>
                     </ol>
                 </div>
@@ -16,15 +16,15 @@
             </div>
         </div>
     </div>
-    
+
     <!-- end page title -->
 
     <div class="row">
         <div class="col-lg-12">
             <div class="form-group mb-3">
-                <label>Titre</label>
+                <label>Nom du service</label>
                 <input type="text" class="form-control @error('title')is-invalid
-                @enderror" value="{{old('title') ?? $service->title}}" name="title" placeholder="Votre Titre" />
+                @enderror" value="{{old('title') ?? $service->title}}" name="title" placeholder="Nom du service..." />
                 @error('title')
                 <div class="invalid-feedback d-block">
                     {{$errors->first('title')}}
@@ -35,11 +35,11 @@
         <div class="col-lg-12">
             <div class="form-group mb-3">
                 <select name="cat_service_id" class="form-select">
-                    <option>-- select option --</option>
+                    <option>-- select une categorie --</option>
                     @forelse($cats as $cat)
                     <option value="{{$cat->id}}">{{$cat->libelle}}</option>
                     @empty
-                    deddes
+                    <p>Pas de Categorie</p>
                     @endforelse
                 </select>
                 @error('cat_service_id')

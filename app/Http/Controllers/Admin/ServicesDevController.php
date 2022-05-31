@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Service;
+use App\Models\CatService;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Yoeunes\Toastr\Facades\Toastr;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ServiceRequest;
-use App\Models\CatService;
 
 class ServicesDevController extends Controller
 {
@@ -62,6 +63,11 @@ class ServicesDevController extends Controller
             $file->move($destinationPath, $fileName);
             $photo = $destinationPath . '' . $fileName;
             $data['file'] = $photo;
+        }else{
+            $destinationPath = 'uploads/services/';
+            $fileName = '97510.jpg';
+            $photo = $destinationPath . '' . $fileName;
+            // $photo = null;
         }
         Service::create([
             'cat_service_id' =>$data['cat_service_id'],
@@ -72,8 +78,8 @@ class ServicesDevController extends Controller
             'user_id' => Auth::id(),
         ]);
 
-
-        return redirect()->route('admin.services.index');
+        Toastr::success('Creation éffectuer avec succes ');
+        return back();
     }
 
     /**
@@ -106,10 +112,10 @@ class ServicesDevController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ServiceRequest $request, $id)
     {
         $service = Service::find($id);
-        $data = Request()->all();
+        $data = $request->validated();
 
         if ($request->hasFile('file')) {
             $file = $request->file('file');
@@ -119,6 +125,11 @@ class ServicesDevController extends Controller
             $file->move($destinationPath, $fileName);
             $photo = $destinationPath . '' . $fileName;
             $data['file'] = $photo;
+        }else{
+            $destinationPath = 'uploads/services/';
+            $fileName = '97510.jpg';
+            $photo = $destinationPath . '' . $fileName;
+            // $photo = null;
         }
         $service->update([
             'title' => $data['title'],
@@ -129,6 +140,7 @@ class ServicesDevController extends Controller
             'user_id' => Auth::id(),
         ]);
             // dd($service);
+        Toastr::success('Modification éffectuer avec succes ');
         return redirect()->route('admin.services.index');
     }
 
@@ -141,6 +153,7 @@ class ServicesDevController extends Controller
     public function destroy(Service $service)
     {
         $service->delete();
+        Toastr::error('Suppression éffectuer avec succes ');
         return redirect()->back();
     }
 }

@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.5",
         "realrashid/sweet-alert": "^5.0",
         "symfony/http-client": "^5.4",
-        "symfony/mailgun-mailer": "^5.4"
+        "symfony/mailgun-mailer": "^5.4",
+        "yoeunes/toastr": "^1.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -2,23 +2,8 @@
 
 @section('content')
     <!-- breadcumb-area -->
+<!-- breadcumb-area -->
 <div class="breadcumb-area">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 txtc  text-center ccase">
-				<div class="brpt">
-					<h2>Création d'identité de marque</h2>
-				</div>
-				<div class="breadcumb-inner">
-					<ul>
-						<li><a href="{{ route('index') }}">Accueil</a></li>
-						<li><i class="fas fa-angle-right"></i></li>
-						<li>Création d'identité de marque</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 
 
@@ -30,8 +15,7 @@
 			<div class="col-lg-12">
 				<div class="witr_section_title">
 					<div class="witr_section_title_inner text-center">
-						<h2>Quelques identité de marque</h2>
-						<h3>Notre plan</h3>
+						<p>{!!$one_service->description!!}</p>
 					</div>
 				</div>
 			</div>
@@ -47,7 +31,7 @@
 						<h4>Charte Graphique</h4>
 
 						<div class="witr_btnp_color">
-							<a class="btn" href="contact.html">Demander un devis</a>
+							<a class="btn" href="{{route('contactez-nous')}}">Demander un devis</a>
 						</div>
                     </div>
                 </div>
@@ -63,7 +47,7 @@
 						<h4>Logos </h4>
 
 						<div class="witr_btnp_color">
-							<a class="btn" href="contact.html">Demander un devis</a>
+							<a class="btn" href="{{route('contactez-nous')}}">Demander un devis</a>
 						</div>
                     </div>
                 </div>
@@ -78,7 +62,52 @@
 						<h4>Signature</h4>
 
 						<div class="witr_btnp_color">
-							<a class="btn" href="contact.html">Demander un devis</a>
+							<a class="btn" href="{{route('contactez-nous')}}">Demander un devis</a>
+						</div>
+                    </div>
+                </div>
+			</div>
+			<!-- beitor_pricing_04 -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="pricing_area all_pricing_color  ">
+                    <div class="pricing-part ">
+						<div class="witr_pricing_icon">
+							<i class="fas fa-sitemap"></i>
+						</div>
+						<h4>Carte de visite</h4>
+
+						<div class="witr_btnp_color">
+							<a class="btn" href="{{route('contactez-nous')}}">Demander un devis</a>
+						</div>
+                    </div>
+                </div>
+			</div>
+			<!-- beitor_pricing_05 -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="pricing_area all_pricing_color  ">
+                    <div class="pricing-part ">
+						<div class="witr_pricing_icon">
+							<i class="fas fa-signal"></i>
+						</div>
+						<h4>Dépliants</h4>
+
+						<div class="witr_btnp_color">
+							<a class="btn" href="{{route('contactez-nous')}}">Demander un devis</a>
+						</div>
+                    </div>
+                </div>
+			</div>
+			<!-- beitor_pricing_06 -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="pricing_area all_pricing_color  ">
+                    <div class="pricing-part ">
+						<div class="witr_pricing_icon">
+							<i class="fas fa-chart-bar"></i>
+						</div>
+						<h4>Bannières</h4>
+
+						<div class="witr_btnp_color">
+							<a class="btn" href="{{route('contactez-nous')}}">Demander un devis</a>
 						</div>
                     </div>
                 </div>

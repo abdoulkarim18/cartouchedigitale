@@ -24,10 +24,10 @@ class ServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'cat_service_id' => 'required',
-            'title' => 'required|max:255',
-            'description' => 'required',
-            'file'=> 'required|image',
+            'cat_service_id' => '',
+            'title' => '',
+            'description' => '',
+            'file'=> '',
         ];
     }
 }

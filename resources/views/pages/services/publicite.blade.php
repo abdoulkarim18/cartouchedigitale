@@ -1,24 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- breadcumb-area -->
+<!-- breadcumb-area -->
 <div class="breadcumb-area">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 txtc  text-center ccase">
-				<div class="brpt">
-					<h2>Publicité en ligne</h2>
-				</div>
-				<div class="breadcumb-inner">
-					<ul>
-						<li><a href="{{ route('index') }}">">Accueil</a></li>
-						<li><i class="fas fa-angle-right"></i></li>
-						<li>Publicité en ligne</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
 
 <div class="beitor-blog-area single-blog-details support_page">
@@ -29,89 +13,53 @@
 					<div class="beitor-single-blog-content">
 						<div class="single-blog-content">
 							<div class="row">
-								<div class="col-lg-4 col-md-5 col-sm-6  blog-lr">
-									<div class="witr_feature_3d witr_feature_con_3d witr_feature_flip_left ">
-										<div class="witr_single_feature_3d all_feature_color text-center">
-											<!-- fontent -->
-											<div class="witr_feature_front_3d font_thumb">
-												<div class="witr_feature_position">
-													<div class="witr_feature_content_3d">
-														<div class="witr_feature_icon_3d">
-															<i class="fas fa-microphone-alt"></i>
-														</div>
-														<h3><a href="#">Avez-vous besoin d'aide?</a></h3>
-														<p>(+225) 0153533896<br>info@alycartouche.ci </p>
-													</div>
-													<div class="witr_feature_btn_3d">
-														<a href="contact.html">Contactez-nous</a>
-													</div>
-												</div>
-											</div>
-											<!-- bekend -->
-											<div class="witr_feature_back_3d">
-												<div class="witr_feature_position">
-													<div class="witr_feature_content_3d">
-														<div class="witr_feature_icon_3d">
-															<i class="fas fa-book-medical"></i>
-														</div>
-														<h3><a href="#">Riviera 2, en face de la pharmacie riviera 2</a></h3>
-														<p>Abidjan, CI </p>
-													</div>
-													<div class="witr_feature_btn_3d">
-														<a href="contact.html">Contactez-nous</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="departmentList all_list_color">
-										<h3>AUTRE SERVICES </h3>
-										<ul>
-											<li><a href="#">Conseption de site web</a></li>
-											<li><a href="#">Evénementiel</a></li>
-											<li><a href="#">Gestion des reseaux sociaux</a></li>
-											<li><a href="#">Elaboration des stratégies digitale</a>
-											<li><a href="#">Création d'identité de marque</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="col-lg-8 col-md-7  col-sm-12  blog-lr">
+								<div class="col-lg-8 col-md-5 col-sm-6  blog-lr">
 									<div class="single_image_area">
 										<div class="single_image  ">
-											<img src="{{ asset('assets/images/012.jpeg') }}" alt="image">
-											<div class="witr_tx_ovei_title"></div>
+											<img src="{{ asset($one_service->file) }}" alt="Image">
 										</div>
 									</div>
-									<div class="witr_text_widget">
-										<div class="witr_text_widget_inner">
-											<h1>Publicité en ligne</h1>
-											<h2>Au service de l'offre professionnels</h2>
-											<div class="about-content">
-												<span><i class="fas fa-check"></i>Publicité en ligne<br></span>
+									<div class="container col-lg-6 col-md-6 col-sm-12 mt-4">
+										<div class="comments-area">
+											<div class="comment-respond ">
+												<div class="commment_title">
+													<h3 class="beitor_btn"><a href="{{route('contactez-nous')}}" class="text-white"> Demander un devis</a> </h3>
+												</div>
 											</div>
-											<div class="about-content">
-												<span><i class="fas fa-check"></i>Assistance et maintenance 24h/24 et 7j/7<br></span>
-											</div>
-											<div class="about-content">
-												<span><i class="fas fa-check"></i>Elaboration de strategie digital<br></span>
-											</div>
+										</div>
+									</div>
+								</div>
 
-										</div>
-									</div>
+								<div class="col-lg-4 col-md-7  col-sm-12  blog-lr">
+
 									<div class="solution_content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem ipsum dolor sit amet, consectetur</p>
-									</div>
-								</div>
-							</div>
-							<div class="container col-lg-4 col-md-6 col-sm-12">
-								<div class="comments-area">
-									<div class="comment-respond ">
-										<div class="commment_title">
-											<h3 class="beitor_btn"><a href="contact.html" class="text-white"> Demander un devis</a> </h3>
+										<p>{!!$one_service->description!!}</p>
+										<p>Nous intervenons en plusieurs étapes :</p>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>Bannière.<br></span>
+										</div>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>L'e-mail marketing.<br></span>
+										</div>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>Pop-Up.<br></span>
+										</div>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>Publicité sur les blogs.<br></span>
+										</div>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>Publicité sur téléphones portables<br></span>
+										</div>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>Publicité sur les réseaux sociaux.<br></span>
+										</div>
+										<div class="about-content">
+											<span><i class="fas fa-check"></i>Publicité en vidéos.<br></span>
 										</div>
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
 				</div>

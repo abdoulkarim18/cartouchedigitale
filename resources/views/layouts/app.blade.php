@@ -46,13 +46,18 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon Icon -->
-	<link rel="icon" type="image/png" href=" {{ asset('assets/images/logo_aly.jpg') }}">
+	<link rel="icon" type="image/png" href=" {{ asset('assets/images/logo1.png') }}">
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/bootstrap.min.css') }}" />
 	<link rel="stylesheet" type="text/css" href=" {{ asset('venobox/venobox.css') }}" />
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/plugin_theme_css.css') }}" />
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/style.css') }}" />
 	<link rel="stylesheet" type="text/css" href=" {{ asset('style.css') }}" />
 	<link rel="stylesheet" type="text/css" href=" {{ asset('assets/css/responsive.css') }}" />
+    {{-- Police --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+
 	<!-- modernizr js -->
 	<script src=" {{ asset('assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 
@@ -65,7 +70,7 @@
 	@include('partials.menu-mobile')
 
     @include('sweetalert::alert')
-    
+
 	@yield('content')
 
 	<!-- witrfm_footer_area -->
@@ -87,6 +92,28 @@
 	<script src=" {{ asset('assets/js/jquery.meanmenu.js') }}"></script>
 	<script src=" {{ asset('assets/js/ajax-mail.js') }}"></script>
 	<script src=" {{ asset('assets/js/theme.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+		var typed = new Typed('#typed', {
+
+			strings :['Bienvenue  dans votre agence de communication Digitale.','Nous sommes outillés et prêts à vous accompagner dans votre transformation digitale.'],
+			typeSpeed : 90,
+			backSpeed : 10,
+			loop: true,
+			showCursor: false,
+		})
+		var typed = new Typed('#typed2', {
+
+			strings :["C'nous qui innovons!!!","Besoin d'une Application pour gerer vos activités, <br> alors vous êtes au meilleur endroit chez"],
+			typeSpeed : 90,
+			backSpeed : 10,
+			loop: true,
+			showCursor: false,
+		})
+
+	</script>
+
 
 </body>
 
