@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', "COUVERTURE MEDIA D'EVENEMENT")
 @section('content')
 <!-- breadcumb-area -->
 <div class="breadcumb-area"></div>

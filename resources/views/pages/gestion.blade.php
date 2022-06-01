@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'GESTION DES RESEAUX')
 @section('content')
 
     <!-- breadcumb-area -->

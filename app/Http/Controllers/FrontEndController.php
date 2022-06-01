@@ -17,6 +17,7 @@ class FrontEndController extends Controller
     public function index(){
 
         // return 'success';
+
         $cat_services = CatService::all();
         return view('pages.index' , compact('cat_services') );
     }

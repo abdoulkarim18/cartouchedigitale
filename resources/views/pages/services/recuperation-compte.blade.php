@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'RECUPERATION DE COMPTE')
 @section('content')
 
 <!-- breadcumb-area -->

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'REFERENCEMENT NATUREL & PAYANT')
 @section('content')
 
 <!-- breadcumb-area -->

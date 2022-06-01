@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'IDENTITE VISUELLE')
 @section('content')
     <!-- breadcumb-area -->
 <!-- breadcumb-area -->

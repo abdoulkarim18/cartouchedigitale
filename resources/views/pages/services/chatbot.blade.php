@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
+@section('title', 'CREATION DE CHATBOT')
 @section('content')
 
 <!-- breadcumb-area -->
 <div class="breadcumb-area">
 </div>
-
-
 
 <!-- BLOG AREA -->
 <div class="blog_area single_service_page single_project">

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'ELABORATION DE STRATEGIE DIGITALE')
 @section('content')
 
 <!-- breadcumb-area -->

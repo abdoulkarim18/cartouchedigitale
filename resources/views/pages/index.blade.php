@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'ACCUEIL')
+
 @section('content')
 <div class="witr_swiper_area">
     <div class="swiper-container witr_active_id5">

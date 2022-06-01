@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', 'POURQUOI NOUS CHOISIR')
 @section('content')
   <!-- breadcumb-area	 -->
 <div class="breadcumb-area">
